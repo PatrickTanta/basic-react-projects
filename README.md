@@ -1,10 +1,7 @@
 # basic-react-projects
 Repository of react projects
-<div align="center">
-# React Potfolio ⚛️
-</div>
-
+# React Portfolio ⚛️
 ## ⌨️ Proyectos
 
-- 01: [Twitter Follow Card](projects/01-twitter-follow-card/)
-- 02: [Tic Tac Toe](projects/02-tic-tac-toe/)
+- 01: [Heroes app](react-heroes-app)
+- 02: [Tic Tac Toe](tic-tac-toe)
