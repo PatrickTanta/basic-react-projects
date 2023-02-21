@@ -1,8 +1,8 @@
 # basic-react-projects
 Repository of react projects
 <div align="center">
-
 # React Potfolio ⚛️
+</div>
 
 ## ⌨️ Proyectos
 
