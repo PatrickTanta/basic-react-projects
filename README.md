@@ -4,10 +4,6 @@ Repository of react projects
 
 # React Potfolio ⚛️
 
-Curso para aprender **React** basado en proyectos.
-**[Todos los miércoles a las 18PM 🇪🇸 en Twitch](https://twitch.tv/midudev)**
-</div>
-
 ## ⌨️ Proyectos
 
 - 01: [Twitter Follow Card](projects/01-twitter-follow-card/)
