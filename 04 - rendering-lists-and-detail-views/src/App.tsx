@@ -1,21 +1,11 @@
 import './App.css'
 import { AppointmentsDayView } from './components/AppointmentsDayView'
+import { appointments } from './sampleData'
 
 function App() {
     return (
         <div className="App">
-            <AppointmentsDayView
-                appointments={[
-                    {
-                        startsAt: new Date().setHours(12, 0),
-                        detail: 'Daily meeting'
-                    },
-                    {
-                        startsAt: new Date().setHours(14, 0),
-                        detail: 'Boss intervention'
-                    }
-                ]}
-            />
+            <AppointmentsDayView appointments={appointments} />
         </div>
     )
 }

@@ -1,11 +1,20 @@
-import { AppointmentsDayView, AppointmentType } from './AppointmentsDayView'
-import { render, screen } from '@testing-library/react'
+import { AppointmentsDayView } from './AppointmentsDayView'
+import { act, render, screen } from '@testing-library/react'
+import { AppointmentType } from './Appointment'
 
 describe('AppointmentDayViewDayView', () => {
     const today = new Date()
     const twoAppointments: AppointmentType[] = [
-        { startsAt: today.setHours(12, 0), detail: 'Daily meeting' },
-        { startsAt: today.setHours(13, 0), detail: 'Partners meeting' }
+        {
+            startsAt: today.setHours(12, 0),
+            detail: 'Daily meeting',
+            customer: { firstName: 'Ashley' }
+        },
+        {
+            startsAt: today.setHours(13, 0),
+            detail: 'Partners meeting',
+            customer: { firstName: 'Jordan' }
+        }
     ]
 
     test('render an ol element to display appointments', () => {
@@ -31,7 +40,21 @@ describe('AppointmentDayViewDayView', () => {
     test('should initially shows a message saying there are no appointments today', () => {
         render(<AppointmentsDayView appointments={[]} />)
         expect(
-            screen.getByRole('heading', 'There"s no appointments to show')
+            screen.getByText('There are no appointments to show')
         ).toBeInTheDocument()
+    })
+
+    test('should has a button element in each li', () => {
+        render(<AppointmentsDayView appointments={twoAppointments} />)
+        const buttons = document.querySelectorAll('li > button')
+        expect(buttons).toHaveLength(2)
+        expect(buttons[0]?.type).toEqual('button')
+    })
+
+    test('should renders another appointment when selected', () => {
+        render(<AppointmentsDayView appointments={twoAppointments} />)
+        const button = document.querySelectorAll('li > button')[1]
+        act(() => button.click())
+        expect(screen.getByTestId('name', 'Jordan')).toBeInTheDocument()
     })
 })
