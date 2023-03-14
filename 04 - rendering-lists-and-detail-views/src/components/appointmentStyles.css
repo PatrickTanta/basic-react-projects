@@ -1,0 +1,17 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* height: calc(100vh - (200px)); */
+    width: 400px;
+    gap: 10px;
+}
+
+.time {
+    border: 1px solid black;
+    background-color: black;
+}
+
+.detail {
+    border: 1px solid black;
+    background-color: brown;
+}

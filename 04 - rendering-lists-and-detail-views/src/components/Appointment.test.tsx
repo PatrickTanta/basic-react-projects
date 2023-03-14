@@ -6,7 +6,7 @@ describe('Appointment', () => {
     it('renders the customer first name', () => {
         const customer = { firstName: 'Ashley' }
         render(<Appointment customer={customer} />)
-        expect(screen.getByText('Ashly')).toBeInTheDocument()
+        expect(screen.getByRole('heading', 'Ashly')).toBeInTheDocument()
         // expect(document.body.textContent).toMatch('Ashley')
     })
 })
