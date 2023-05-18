@@ -5,10 +5,10 @@ export type AppointmentType = {
     detail?: string
     customer?: {
         firstName: string
-        lastName: string
-        phone: string
-        service: string
-        notes: string
+        lastName?: string
+        phone?: string
+        service?: string
+        notes?: string
     }
 }
 
@@ -27,9 +27,9 @@ export const Appointment: FC<AppointmentType> = (props) => {
             </p>
             <div className="appointment__content">
                 <div className="subtitle">Customer</div>
-                <div className="description" test-id="name">{`${
+                <div className="description" data-testid="name">{`${
                     props.customer?.firstName
-                }${` ${props.customer?.lastName}` ?? ''}`}</div>
+                }${` ${props.customer?.lastName ?? ''}`}`}</div>
             </div>
             <div className="appointment__content">
                 <div className="subtitle">Phone Number</div>

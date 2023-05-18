@@ -1,4 +1,4 @@
-import './App.css'
+import './index.css'
 import { AppointmentsDayView } from './components/AppointmentsDayView'
 import { appointments } from './sampleData'
 

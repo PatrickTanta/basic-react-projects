@@ -13,23 +13,33 @@ export const appointments = [
         }
     },
     {
-        startsAt: at(10),
+        startsAt: at(11),
         customer: {
-            firstName: 'Frankie',
-            lastName: ' Quispe',
-            phone: '946783124',
-            service: 'Sport',
-            notes: 'Soccer session'
+            firstName: 'Sarah',
+            lastName: 'Jones',
+            phone: '957432987',
+            service: 'Haircut',
+            notes: 'Long hair, needs trimming'
         }
     },
     {
-        startsAt: at(11),
+        startsAt: at(14),
         customer: {
-            firstName: 'Casey',
-            lastName: 'Berth',
-            phone: '946784354',
-            service: 'Pedistri',
-            notes: 'Daily meeting 2'
+            firstName: 'John',
+            lastName: 'Doe',
+            phone: '954321123',
+            service: 'Pedicure',
+            notes: 'Sensitive skin, allergic to perfumes'
+        }
+    },
+    {
+        startsAt: at(16),
+        customer: {
+            firstName: 'Jane',
+            lastName: 'Smith',
+            phone: '943215678',
+            service: 'Facial',
+            notes: 'Regular customer, no special requests'
         }
     },
     {
